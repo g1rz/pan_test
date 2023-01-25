@@ -52,7 +52,7 @@
         &:hover 
             background: rgba($gray_light, 0.2)
 
-        &:active, &.active 
+        &:active, &.is-active 
             background: $main_color
 
         &--parent 
@@ -118,3 +118,26 @@
         line-height: 20px
         color: #fff 
         
+@media (max-width: $media_lg)
+    .header__col--menu
+        margin-left: 109px
+
+    .main-menu
+        &__item 
+            margin-right: 27px
+        &__link
+            font-size: 14px 
+            line-height: 18px
+
+@media (max-width: $media_md)
+    .header__col--menu
+        margin-left: 40px
+
+    .main-menu
+        &__item 
+            margin-right: 15px
+
+        &__link 
+            padding: 5px 10px
+            &--parent 
+                padding-right: 30px
