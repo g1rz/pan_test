@@ -1,0 +1,35 @@
+block variables
+  -
+    var title = 'title'
+    var description = 'description'
+
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title= title
+        meta(name='description' content=description)
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+
+
+        link(rel='stylesheet' href='css/libs.min.css')
+        link(rel='stylesheet' href='css/style.css')
+    body(class=index ? 'main-page' : 'inner')
+        
+
+    
+        include ../components/header
+        
+        main.main-content
+            block content
+
+        include ../components/footer
+
+
+        #top
+            svg 
+                use(xlink:href="img/sprite.svg#top")
+        
+
+        script(src='js/libs.min.js')
+        script(src='js/scripts.js')

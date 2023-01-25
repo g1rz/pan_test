@@ -1,0 +1,28 @@
+section.section 
+    .container.container--min
+        .row 
+            .cols.cols-6 
+                .progressbar-wrap
+                    .progressbar 
+                        .progressbar__inner(style="width:5%", data-val="5")
+                            | 5 %
+                    .progressbar-control  
+                        button.progressbar-btn.btn.btn--primary 
+                            | + 25 %
+                        p.progressbar-info 
+                            | При нажатии на кнопку прогрессбар заполняется на столько процентов, сколько указано на кнопке
+            .cols.cols-6 
+                .text-big
+                    p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. 
+
+                .more-block.text-big
+                    .more-block__inner
+                        p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. 
+                        p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. 
+                        p Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. 
+                    
+                    button.more-block__toggle
+                        span.more-block__toggle-open Подробнее
+                        span.more-block__toggle-close Свернуть
+                        svg.more-block__toggle-icon
+                            use(xlink:href="./img/sprite.svg#angle-left")

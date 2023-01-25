@@ -1,0 +1,14 @@
+@mixin center 
+    display: flex 
+    align-items: center 
+    justify-content: center
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) 
+    @font-face 
+        font-family: $font-family
+        font-weight: $weight
+        font-style: $style
+        src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff')
+  
+@mixin transitionDefault
+    transition: all 0.3s ease-in-out

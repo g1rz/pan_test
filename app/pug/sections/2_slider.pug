@@ -1,0 +1,44 @@
+include ./_rating
+
+-
+    var slider = [
+        {
+            image: './img/slider/slide-1.jpg',
+            rating: 3
+        }, {
+            image: './img/slider/slide-2.jpg',
+            rating: 1
+        }, {
+            image: './img/slider/slide-3.jpg',
+            rating: 4
+        }, {
+            image: './img/slider/slide-1.jpg',
+            rating: 3
+        }, {
+            image: './img/slider/slide-2.jpg',
+            rating: 1
+        }
+    ]
+
+section.section.section--overflow 
+    .container 
+        h2 Обычный слайдер
+
+        .s-slider.swiper.cols-11
+            .swiper-wrapper 
+                each item in slider
+                    a.swiper-slide.s-slider__item(href="#")
+                        .s-slider__item-inner
+                            .s-slider__item-image 
+                                img(src=item.image)
+
+                        .s-slider__item-rating 
+                            +rating(item.rating)
+            button.s-slider-nav.s-slider-nav--prev
+                svg
+                    use(xlink:href="./img/sprite.svg#angle-left")
+            button.s-slider-nav.s-slider-nav--next
+                svg
+                    use(xlink:href="./img/sprite.svg#angle-left")
+            
+        .s-slider-dots

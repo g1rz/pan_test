@@ -1,0 +1,41 @@
+.more-block 
+    &.active 
+        .more-block__inner 
+            display: block
+    &__inner 
+        display: none
+
+    &__toggle 
+        position: relative
+        margin-top: 15px
+        padding-right: 14px
+        font-size: 14px
+        line-height: 18px
+        color: $gray_light
+        border: none
+        cursor: pointer
+        &:hover 
+            color: $main_color
+            .more-block__toggle-icon
+                stroke: $main_color
+
+        &.active 
+            .more-block
+                &__toggle-icon
+                    transform: rotate(90deg)
+                &__toggle-open
+                    display: none 
+                &__toggle-close 
+                    display: inline
+
+    &__toggle-close 
+        display: none 
+
+    &__toggle-icon 
+        position: absolute
+        top: 5px
+        right: 0
+        width: 8px
+        height: 8px
+        stroke: $gray_light
+        transform: rotate(-90deg)

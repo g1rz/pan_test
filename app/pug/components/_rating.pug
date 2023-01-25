@@ -1,0 +1,7 @@
+mixin rating(rating)
+    ul.rating  
+        - for (var i = 1; i <= rating; i++)
+            li.rating__item.active
+
+        - for (var k = rating; k < 5 ; k++)
+            li.rating__item

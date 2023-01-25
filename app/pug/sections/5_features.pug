@@ -1,0 +1,28 @@
+-
+    var features = [
+        {
+            title: '3,000',
+            text: 'Агенств'
+        }, {
+            title: '10,000',
+            text: 'Партнеров'
+        }, {
+            title: '80,000',
+            text: 'Квартир в базе'
+        }, {
+            title: '100+',
+            text: 'Застройщиков'
+        }, {
+            title: '200',
+            text: 'Сотрудников'
+        }
+    ]
+
+section.section.section--min 
+    .container.container--min 
+        .features 
+            each item in features
+                .features__item
+                    p.features__item-title 
+                        | !{item.title}
+                    p !{item.text}

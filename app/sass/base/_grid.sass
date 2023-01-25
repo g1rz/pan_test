@@ -1,0 +1,135 @@
+$width_lg: 1280px
+$width_md: 991px
+$width_sm: 768px 
+$width_xs: 576px
+
+$col_gap: 15px
+    
+    
+.container
+    max-width: 1500px
+    margin: 0 auto
+    padding: 0 15px
+
+    &--min
+        max-width: 1250px
+
+@media (max-width: $width_lg) 
+    .container
+        max-width: 1230px
+        &--min 
+            max-width: 1030px
+
+@media (max-width: $width_sm) 
+    .container
+        max-width: 758px
+        &--min 
+            max-width: 634px
+
+
+
+.row
+    display: flex
+    margin-left: -15px
+    margin-right: -15px
+    flex-wrap: wrap
+    &--m 
+        margin-left: 0
+        margin-right: 0
+    &--min 
+        margin-left: -6px
+        margin-right: -6px
+    &--align-c
+        align-items: center
+    &--align-e
+        align-items: flex-end
+    &--stretch 
+        align-items: stretch
+    &--space-b
+        justify-content: space-between
+    &--space-a
+        justify-content: space-around
+    &--center 
+        justify-content: center
+    &--no-wrap 
+        flex-wrap: nowrap
+    &--right 
+        justify-content: flex-end
+        
+
+.cols 
+    padding: 0 15px
+    &--min 
+        padding: 0 6px
+
+@for $i from 1 through 12
+    .cols-#{$i}
+        width: $i * 100% / 12
+
+.hide 
+    display: none !important
+
+.show 
+    display: block !important
+
+
+@media (max-width: $width_lg)
+    @for $i from 1 through 12
+        .cols-lg-#{$i}
+            width: $i * 100% / 12
+    @for $i from 1 through 12
+        .order-lg-#{$i}
+            order: $i 
+
+    .hide-lg
+        display: none !important
+    .show-lg
+        display: block !important
+
+@media (max-width: $width_md)
+    @for $i from 1 through 12
+        .cols-md-#{$i}
+            width: $i * 100% / 12
+    @for $i from 1 through 12
+        .order-md-#{$i}
+            order: $i 
+
+    .row--md-reverse 
+        flex-direction: column-reverse
+    .hide-md 
+        display: none !important
+    .show-md
+        display: block !important
+
+@media (max-width: $width_sm)
+    .row 
+        margin-left: -10px
+        margin-right: -10px
+        
+    .cols 
+        padding: 0 10px 
+
+    @for $i from 1 through 12
+        .cols-sm-#{$i}
+            width: $i * 100% / 12
+    @for $i from 1 through 12
+        .order-sm-#{$i}
+            order: $i 
+    .hide-sm 
+        display: none !important
+    .show-sm
+        display: block !important
+
+@media (max-width: $width_xs)
+    @for $i from 1 through 12
+        .cols-xs-#{$i}
+            width: $i * 100% / 12
+
+    @for $i from 1 through 12
+        .order-xs-#{$i}
+            order: $i 
+
+    .hide-xs
+        display: none !important
+    .show-xs
+        display: block !important

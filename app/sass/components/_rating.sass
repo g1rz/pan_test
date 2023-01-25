@@ -1,0 +1,15 @@
+.rating 
+    display: flex 
+    margin: 0
+    padding: 0
+    list-style: none 
+    &__item 
+        width: 22px
+        height: 22px
+        margin-right: 7px 
+        background: url('../img/sprite.svg#star') no-repeat center 
+        &:last-child
+            margin-right: 0
+        
+        &.active 
+            background-image: url('../img/sprite.svg#star-active')
