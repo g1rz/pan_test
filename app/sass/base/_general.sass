@@ -108,6 +108,40 @@ body
     font-size: 20px
     line-height: 34px
 
+.text-center 
+    text-align: center
+
+.text-left 
+    text-align: left
+
+.text-right 
+    text-align: right
+
+.phone 
+    font-size: 25px 
+    font-weight: 700
+    line-height: 30px
+    color: $black_light
+    &:hover 
+        color: $main_color
+
+.link 
+    position: relative
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    color: $main_color
+    &::after 
+        content: ''
+        position: absolute
+        bottom: -2px
+        left: 0
+        width: 100%
+        height: 1px
+        background: $main_color
+    &:hover::after
+        opacity: 0
+
 .top 
     position: fixed 
     display: flex 
@@ -142,10 +176,18 @@ body
         font-size: 18px
         line-height: 26px
 
+    .phone 
+        font-size: 20px 
+        line-height: 26px
+
 @media (max-width: $media_md)
     .main-content
         margin-top: 77px
 
     .text-big
         font-size: 15px
+        line-height: 22px
+
+    .phone 
+        font-size: 18px 
         line-height: 22px
