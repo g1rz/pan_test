@@ -26,5 +26,18 @@
 
 @media (max-width: $media_lg)
     .features
+        gap: 20px 
+
         &__item
             padding: 28px 25px
+            min-height: auto
+            font-size: 18px 
+            line-height: 26px
+
+        &__item-title 
+            font-size: 30px 
+            line-height: 35px
+        
+@media (max-width: $media_md)
+    .features 
+        grid-template-columns: repeat(3, 1fr)

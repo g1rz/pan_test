@@ -108,6 +108,35 @@ body
     font-size: 20px
     line-height: 34px
 
+.top 
+    position: fixed 
+    display: flex 
+    align-items: center
+    bottom: 20px
+    right: 40px
+    padding-right: 37px
+    font-size: 14px 
+    line-height: 18px
+    color: $black_light
+    cursor: pointer
+
+    &:hover 
+        .top__icon 
+            background: $main_color
+    &__icon 
+        +center
+        width: 30px
+        height: 30px
+        margin-left: 10px
+        border-radius: 50%
+        background: $black_light
+        svg 
+            width: 6px
+            height: 6px
+            stroke: #fff
+            transform: rotate(90deg)
+
+
 @media (max-width: $media_lg)
     .text-big
         font-size: 18px

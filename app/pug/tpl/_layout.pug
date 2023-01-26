@@ -26,9 +26,13 @@ html
         include ../sections/footer
 
 
-        #top
-            svg 
-                use(xlink:href="img/sprite.svg#top")
+        .top#top
+            span
+                | Наверх
+            .top__icon 
+                svg
+                    use(xlink:href="img/sprite.svg#angle-left")
+            
         
 
         script(src='js/libs.min.js')
