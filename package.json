@@ -7,7 +7,6 @@
         "start": "gulp",
         "build": "gulp build"
     },
-    
     "author": "g1rz",
     "license": "ISC",
     "devDependencies": {

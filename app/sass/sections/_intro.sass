@@ -1,8 +1,23 @@
 .intro 
-    padding: 150px 0 176px
+    padding: 150px 0 100px
     color: #fff
     background: $black_dark
+    min-height: calc(100vh - 86px)
 
     &__title
         max-width: 500px
 
+
+@media (max-width: $media_lg)
+    .intro
+        padding-top: 112px
+        min-height: calc(100vh - 77px)
+        &__title 
+            font-size: 30px 
+            line-height: 35px
+        &__image 
+            max-width: 100%
+
+@media (max-width: $media_md)
+    .intro 
+        padding-top: 106px

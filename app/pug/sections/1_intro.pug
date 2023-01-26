@@ -1,18 +1,18 @@
 section.intro 
     .container 
         .row.row--center
-            .cols.cols-6 
+            .cols.cols-6.cols-md-5 
                 h1.intro__title
                     | Недвижимость Санкт-Петербурга и Москвы
 
                 form.form.intro__form(action="#", method="post")
                     .form-row.row 
-                        .cols.cols-6.cols-sm-12
+                        .cols.cols-6.cols-md-12
                             .f-group 
-                                label.f-label 
+                                label.f-label(for="f_city") 
                                     | Выбрать город
                                 .selector
-                                    input.selector__input(type="hidden", name="city")
+                                    input.selector__input(type="hidden", name="city", id="f_city")
                                     .selector__head 
                                         | Выбрать город
                                     ul.selector__list 
@@ -24,20 +24,20 @@ section.intro
                                             | Владивосток
                                         li.selector__list-item 
                                             | Оренбург   
-                        .cols.cols-6.cols-sm-12  
+                        .cols.cols-6.cols-md-12  
                             .f-group 
-                                label.f-label
+                                label.f-label(for="f_email")
                                     | Ваш e-mail
-                                input.f-input(type="email", name="email" )
+                                input.f-input(type="email", name="email", id="f_email" )
                         .cols.cols-12  
                             .f-group 
                                 button.btn.btn--primary.form-submit 
                                     | Кнопка действия
-                        .cols.cols-7.cols-sm-12
+                        .cols.cols-7.cols-md-12
                             label.check
                                 input.check__input(type="checkbox", name="pdn", required)
                                 span.check__label 
                                     | Отправляя нам данную форму вы соглашаетесь с #[a(href="#", target="_blank") политикой конфиденциальности]
 
-            .cols.cols-4 
+            .cols.cols-4.cols-md-6 
                 object.intro__image(data="./img/intro.svg", type="image/svg+xml") 

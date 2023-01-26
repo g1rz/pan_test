@@ -26,8 +26,13 @@
 
 .progressbar-control
     display: flex
-    align-items: center
+    align-items: flex-start
 
 .progressbar-btn 
     min-width: 180px
     margin-right: 30px
+
+@media (max-width: $media_md)
+    .progressbar-btn
+        min-width: 108px
+        margin-right: 16px

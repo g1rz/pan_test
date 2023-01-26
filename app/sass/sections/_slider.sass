@@ -85,3 +85,24 @@
     .swiper-pagination-bullet-active
         background: $main_color
         opacity: 1
+
+@media (max-width: $media_xl)
+    .s-slider-nav
+        &--next
+            right: 78px
+
+@media (max-width: $media_lg)
+    .s-slider
+        &__item
+            width: 380px
+
+    .s-slider-dots
+        margin-top: 40px
+
+@media (max-width: $media_md)
+    .s-slider
+        &__item
+            width: 230px
+
+    .s-slider-dots
+        margin-top: 30px
