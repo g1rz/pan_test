@@ -155,7 +155,7 @@ function yandexMap() {
             center: [59.930399, 30.350732],
          
             zoom: 16,
-            controls: []
+            controls: ['zoomControl']
         });
 
       
@@ -245,7 +245,8 @@ function yandexMap() {
 
         myMap.geoObjects.add(myPlacemark);
         myPlacemark.balloon.open();
-    
+        
+        myMap.behaviors.disable('scrollZoom');
     }
 }
 

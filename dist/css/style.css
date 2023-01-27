@@ -784,6 +784,15 @@ body {
   line-height: 18px;
   color: #2C2E3E;
   cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+}
+.top.active {
+  opacity: 1;
+  z-index: 10;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .top:hover .top__icon {
   background: #FF2D23;
@@ -1132,6 +1141,9 @@ body {
   line-height: 20px;
   color: #fff;
   text-align: center;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .progressbar-control {
@@ -1606,5 +1618,39 @@ body {
   .s-slider-dots {
     margin-top: 30px;
   }
+}
+.map {
+  height: 506px;
+}
+
+.popover {
+  position: absolute;
+  padding: 40px 50px;
+  background: #fff;
+  border-radius: 5px;
+  color: #2C2E3E;
+}
+.popover__arrow {
+  position: absolute;
+  bottom: -38px;
+  left: 0;
+  border-top: 20px solid #fff;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #fff;
+}
+.popover__title {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.popover__content {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.popover__footer {
+  padding-bottom: 5px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=693e0701-3d32-4092-acd6-aecc1015ee93&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body class="main-page">
@@ -202,18 +203,15 @@
                                 <div class="progressbar__inner" style="width:5%" data-val="5">5 %</div>
                             </div>
                             <div class="progressbar-control">
-                                <button class="progressbar-btn btn btn--primary">
-                                    + 25 %</button>
+                                <button class="progressbar-btn btn btn--primary" data-add="25">+ 25 %</button>
                                 <p class="progressbar-info">
                                     При нажатии на кнопку прогрессбар заполняется на столько процентов, сколько указано на кнопке</p>
                             </div>
                         </div>
                     </div>
                     <div class="cols cols-6">
-                        <div class="text-big">
-                            <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
-                        </div>
                         <div class="more-block text-big">
+                            <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
                             <div class="more-block__inner">
                                 <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
                                 <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
@@ -231,7 +229,7 @@
         </section>
         <section class="section">
             <div class="container container--min">
-                <div class="map-temp"> <img src="./img/map-temp.jpg"></div>
+                <div class="map" id="map"></div>
             </div>
         </section>
         <section class="section section--min">
@@ -274,7 +272,7 @@
             </div>
         </div>
     </footer>
-    <div class="top" id="top"><span>Наверх</span>
+    <div class="top"><span>Наверх</span>
         <div class="top__icon">
             <svg>
                 <use xlink:href="img/sprite.svg#angle-left"></use>
