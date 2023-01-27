@@ -14,11 +14,13 @@ html
 
         link(rel='stylesheet' href='css/libs.min.css')
         link(rel='stylesheet' href='css/style.css')
+        
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=693e0701-3d32-4092-acd6-aecc1015ee93&lang=ru_RU" type="text/javascript"></script>
     body(class=index ? 'main-page' : 'inner')
         
 
     
-        //- include ../sections/header
+        include ../sections/header
         
         main.main-content
             block content
@@ -26,7 +28,7 @@ html
         include ../sections/footer
 
 
-        .top#top
+        .top
             span
                 | Наверх
             .top__icon 

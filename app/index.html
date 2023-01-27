@@ -6,9 +6,50 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"><script src="https://api-maps.yandex.ru/2.1/?apikey=693e0701-3d32-4092-acd6-aecc1015ee93&lang=ru_RU" type="text/javascript"></script>
   </head>
   <body class="main-page">
+    <header class="header"> 
+      <div class="container"> 
+        <div class="header__row"> 
+          <div class="header__col header__col--logo"><a class="logo" href="/"><img class="logo__img" src="./img/logo.svg"></a></div>
+          <div class="header__col header__col--menu">
+            <nav class="main-menu-nav"> 
+              <ul class="main-menu"> 
+                <li class="main-menu__item"><a class="main-menu__link main-menu__link--parent" href="#">Пункт 1</a>
+                  <ul class="main-submenu">
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                    <li class="main-submenu__item"> <a class="main-submenu__link" href="#"><img class="main-submenu__link-icon" src="./img/sprite.svg#menu-icon"><span class="main-submenu__link-title">
+                           Меню 1</span><span>Покупайте и продавайте</span></a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item"><a class="main-menu__link is-active" href="#">Пункт 2</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Пункт 3</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Пункт 4</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Пункт 5</a></li>
+              </ul>
+              <!-- main-menu END-->
+            </nav>
+            <!-- main-menu-nav END-->
+          </div>
+          <div class="header__col header__col--buttons"><a class="btn btn--primary btn--small" href="#">Кнопка</a></div>
+        </div>
+        <!-- .header__row END-->
+      </div>
+    </header>
     <main class="main-content">
       <section class="intro"> 
         <div class="container"> 
@@ -161,10 +202,8 @@
               </div>
             </div>
             <div class="cols cols-6">
-              <div class="text-big">
-                <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
-              </div>
               <div class="more-block text-big">
+                <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
                 <div class="more-block__inner">
                   <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
                   <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
@@ -182,7 +221,7 @@
       </section>
       <section class="section"> 
         <div class="container container--min">
-          <div class="map-temp"> <img src="./img/map-temp.jpg"></div>
+          <div class="map" id="map"></div>
         </div>
       </section>
       <section class="section section--min"> 
@@ -225,7 +264,7 @@
         </div>
       </div>
     </footer>
-    <div class="top" id="top"><span>Наверх</span>
+    <div class="top"><span>Наверх</span>
       <div class="top__icon"> 
         <svg>
           <use xlink:href="img/sprite.svg#angle-left"></use>
