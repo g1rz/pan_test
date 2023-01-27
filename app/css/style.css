@@ -784,6 +784,7 @@ body {
   line-height: 18px;
   color: #2C2E3E;
   cursor: pointer;
+  z-index: 1000;
 }
 .top:hover .top__icon {
   background: #FF2D23;

@@ -53,11 +53,233 @@
         </div>
     </header>
     <main class="main-content">
+        <section class="intro">
+            <div class="container">
+                <div class="row row--center">
+                    <div class="cols cols-6 cols-md-5">
+                        <h1 class="intro__title">Недвижимость Санкт-Петербурга и Москвы</h1>
+                        <form class="form intro__form" action="#" method="post">
+                            <div class="form-row row">
+                                <div class="cols cols-6 cols-md-12">
+                                    <div class="f-group">
+                                        <label class="f-label" for="f_city">
+                                            Выбрать город</label>
+                                        <div class="selector">
+                                            <input class="selector__input" type="hidden" name="city" id="f_city">
+                                            <div class="selector__head">
+                                                Выбрать город</div>
+                                            <ul class="selector__list">
+                                                <li class="selector__list-item">
+                                                    Москва</li>
+                                                <li class="selector__list-item">
+                                                    Санкт-Петербург</li>
+                                                <li class="selector__list-item">
+                                                    Владивосток</li>
+                                                <li class="selector__list-item">
+                                                    Оренбург </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cols cols-6 cols-md-12">
+                                    <div class="f-group">
+                                        <label class="f-label" for="f_email">Ваш e-mail</label>
+                                        <input class="f-input" type="email" name="email" id="f_email">
+                                    </div>
+                                </div>
+                                <div class="cols cols-12">
+                                    <div class="f-group">
+                                        <button class="btn btn--primary form-submit">
+                                            Кнопка действия</button>
+                                    </div>
+                                </div>
+                                <div class="cols cols-7 cols-md-12">
+                                    <label class="check">
+                                        <input class="check__input" type="checkbox" name="pdn" required><span class="check__label">
+                                            Отправляя нам данную форму вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="cols cols-4 cols-md-6">
+                        <object class="intro__image" data="./img/intro.svg" type="image/svg+xml"> </object>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--overflow">
+            <div class="container">
+                <h2>Обычный слайдер</h2>
+                <div class="s-slider swiper cols-11">
+                    <div class="swiper-wrapper"> <a class="swiper-slide s-slider__item" href="#">
+                            <div class="s-slider__item-inner">
+                                <div class="s-slider__item-image"> <img src="./img/slider/slide-1.jpg"></div>
+                            </div>
+                            <div class="s-slider__item-rating">
+                                <ul class="rating">
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                </ul>
+                            </div>
+                        </a><a class="swiper-slide s-slider__item" href="#">
+                            <div class="s-slider__item-inner">
+                                <div class="s-slider__item-image"> <img src="./img/slider/slide-2.jpg"></div>
+                            </div>
+                            <div class="s-slider__item-rating">
+                                <ul class="rating">
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                </ul>
+                            </div>
+                        </a><a class="swiper-slide s-slider__item" href="#">
+                            <div class="s-slider__item-inner">
+                                <div class="s-slider__item-image"> <img src="./img/slider/slide-3.jpg"></div>
+                            </div>
+                            <div class="s-slider__item-rating">
+                                <ul class="rating">
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item"></li>
+                                </ul>
+                            </div>
+                        </a><a class="swiper-slide s-slider__item" href="#">
+                            <div class="s-slider__item-inner">
+                                <div class="s-slider__item-image"> <img src="./img/slider/slide-1.jpg"></div>
+                            </div>
+                            <div class="s-slider__item-rating">
+                                <ul class="rating">
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                </ul>
+                            </div>
+                        </a><a class="swiper-slide s-slider__item" href="#">
+                            <div class="s-slider__item-inner">
+                                <div class="s-slider__item-image"> <img src="./img/slider/slide-2.jpg"></div>
+                            </div>
+                            <div class="s-slider__item-rating">
+                                <ul class="rating">
+                                    <li class="rating__item active"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                    <li class="rating__item"></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="s-slider-nav s-slider-nav--prev">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#angle-left"></use>
+                        </svg>
+                    </button>
+                    <button class="s-slider-nav s-slider-nav--next">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#angle-left"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="s-slider-dots"></div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container container--min">
+                <div class="row row--center">
+                    <div class="cols cols-6">
+                        <div class="progressbar-wrap">
+                            <div class="progressbar">
+                                <div class="progressbar__inner" style="width:5%" data-val="5">5 %</div>
+                            </div>
+                            <div class="progressbar-control">
+                                <button class="progressbar-btn btn btn--primary">
+                                    + 25 %</button>
+                                <p class="progressbar-info">
+                                    При нажатии на кнопку прогрессбар заполняется на столько процентов, сколько указано на кнопке</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols cols-6">
+                        <div class="text-big">
+                            <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
+                        </div>
+                        <div class="more-block text-big">
+                            <div class="more-block__inner">
+                                <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
+                                <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
+                                <p>Большинство онкологических пациентов испытывают страх перед неизвестностью того, что их ожидает в процессе лечения рака. </p>
+                            </div>
+                            <button class="more-block__toggle"><span class="more-block__toggle-open">Подробнее</span><span class="more-block__toggle-close">Свернуть</span>
+                                <svg class="more-block__toggle-icon">
+                                    <use xlink:href="./img/sprite.svg#angle-left"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container container--min">
+                <div class="map-temp"> <img src="./img/map-temp.jpg"></div>
+            </div>
+        </section>
+        <section class="section section--min">
+            <div class="container container--min">
+                <div class="features">
+                    <div class="features__item">
+                        <p class="features__item-title"> 3,000</p>
+                        <p>Агенств</p>
+                    </div>
+                    <div class="features__item">
+                        <p class="features__item-title"> 10,000</p>
+                        <p>Партнеров</p>
+                    </div>
+                    <div class="features__item">
+                        <p class="features__item-title"> 80,000</p>
+                        <p>Квартир в базе</p>
+                    </div>
+                    <div class="features__item">
+                        <p class="features__item-title"> 100+</p>
+                        <p>Застройщиков</p>
+                    </div>
+                    <div class="features__item">
+                        <p class="features__item-title"> 200</p>
+                        <p>Сотрудников</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <div id="top">
-        <svg>
-            <use xlink:href="img/sprite.svg#top"></use>
-        </svg>
+    <footer class="footer">
+        <div class="container container--min">
+            <div class="footer__inner">
+                <div class="row">
+                    <div class="cols cols-3 cols-lg-4">
+                        <p>Санкт-Петербург, Владимирский&nbsp;пр., д.&nbsp;3 лит. А, офис 701</p>
+                    </div>
+                    <div class="cols cols-6 cols-lg-4 text-center"><a class="phone" href="+ 78124456809">+ 7 (812) 445-68-09</a></div>
+                    <div class="cols cols-3 cols-lg-4 text-right"> <a class="link" href="#">Напишите нам</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="top" id="top"><span>Наверх</span>
+        <div class="top__icon">
+            <svg>
+                <use xlink:href="img/sprite.svg#angle-left"></use>
+            </svg>
+        </div>
     </div>
     <script src="js/libs.min.js"></script>
     <script src="js/scripts.js"></script>
