@@ -1133,6 +1133,9 @@ body {
   line-height: 20px;
   color: #fff;
   text-align: center;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .progressbar-control {
