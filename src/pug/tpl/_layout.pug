@@ -1,0 +1,41 @@
+block variables
+  -
+    var title = 'title'
+    var description = 'description'
+
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title= title
+        meta(name='description' content=description)
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+
+
+        link(rel='stylesheet' href='css/libs.css')
+        link(rel='stylesheet' href='css/style.css')
+        
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=693e0701-3d32-4092-acd6-aecc1015ee93&lang=ru_RU" type="text/javascript"></script>
+    body(class=index ? 'main-page' : 'inner')
+        
+
+    
+        include ../sections/header
+        
+        main.main-content
+            block content
+
+        include ../sections/footer
+
+
+        .top
+            span
+                | Наверх
+            .top__icon 
+                svg
+                    use(xlink:href="img/sprite.svg#angle-left")
+            
+        
+
+        //- script(src='js/libs.min.js')
+        script(src='js/bundle.js')
