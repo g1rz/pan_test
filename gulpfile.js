@@ -18,7 +18,7 @@ const sass = gulpSass(dartSass);
 export const browsersync = () => {
     sync.init({
         server: {
-            baseDir: './src/',
+            baseDir: './public/',
             serveStaticOptions: {
                 extensions: ['html'],
             },
@@ -45,7 +45,7 @@ export const style = () => {
             // )
             // .pipe(rename('style.min.css'))
             .pipe(sourcemap.write('.'))
-            .pipe(gulp.dest('./src/css/'))
+            .pipe(gulp.dest('./public/css/'))
             .pipe(sync.stream())
     );
 };
@@ -75,7 +75,7 @@ export const js = () => {
                 },
             }),
         )
-        .pipe(gulp.dest('./src/js/'))
+        .pipe(gulp.dest('./public/js/'))
         .pipe(sync.stream());
 };
 
@@ -83,7 +83,7 @@ export const pugPages = () => {
     return gulp
         .src('./src/pug/*.pug')
         .pipe(pug({ pretty: true }))
-        .pipe(gulp.dest('./src/'))
+        .pipe(gulp.dest('./public/'))
         .pipe(sync.reload({ stream: true }));
 };
 
@@ -98,7 +98,7 @@ export const images = () => {
                 svgo(),
             ]),
         )
-        .pipe(gulp.dest('./build/img/'))
+        .pipe(gulp.dest('./public/img/'))
         .pipe(sync.stream());
 };
 
@@ -114,16 +114,16 @@ export const sprite = () => {
                 },
             }),
         )
-        .pipe(gulp.dest('./src/img/'));
+        .pipe(gulp.dest('./public/img/'));
 };
 
 export const clean = () => {
-    return deleteAsync(['build/*/']);
+    return deleteAsync(['build/*/', 'public/*/']);
 };
 
 export const watchDev = () => {
     gulp.watch(['./src/sass/**/*.sass'], gulp.series(style)).on('change', sync.reload);
-    gulp.watch(['./src/js/**/*.js', '!./src/js/bundle.js'], gulp.series(js));
+    gulp.watch(['./src/js/**/*.js'], gulp.series(js));
     // gulp.watch('./src/img/**/*.{jpg,svg,png}', gulp.series(images));
     gulp.watch('./src/img/svg/*.svg', gulp.series(sprite));
 
@@ -133,31 +133,38 @@ export const watchDev = () => {
 const buildCss = () => {
     gulp.src([
         // Переносим библиотеки в продакшен
-        'src/css/**/*.css',
+        './public/css/**/*.css',
     ]).pipe(gulp.dest('build/css'));
 };
 
 const buildFonts = () => {
-    gulp.src('src/fonts/**/*') // Переносим шрифты в продакшен
+    gulp.src('./public/fonts/**/*') // Переносим шрифты в продакшен
         .pipe(gulp.dest('build/fonts'));
 };
 
 const buildJs = () => {
-    gulp.src('src/js/bundle.js') // Переносим скрипты в продакшен
+    gulp.src('./public/js/bundle.js') // Переносим скрипты в продакшен
         .pipe(gulp.dest('build/js'));
 };
 
 const buildHtml = () => {
-    gulp.src('src/*.html') // Переносим HTML в продакшен
+    gulp.src('./public/*.html') // Переносим HTML в продакшен
         .pipe(gulp.dest('build'));
 };
 
 const buildPhp = () => {
-    gulp.src('src/*.php').pipe(gulp.dest('build'));
+    gulp.src('./public/*.php').pipe(gulp.dest('build'));
 };
 
-export const buildFiles = () => {
-    gulp.parallel(buildCss, buildCssMap, buildFonts, buildJs, buildHtml);
+export const copyFiles = () => {
+    return gulp.src([ // Выбираем нужные файлы
+		'./public/css/**/*.css',
+		'./public/js/**/*.js',
+		'./public/fonts/**/*',
+        './public/img/**/*',
+		'./public/*.html'
+		], { base: 'public' }) // Параметр "base" сохраняет структуру проекта при копировании
+	.pipe(gulp.dest('build')) // Выгружаем в папку с финальной сборкой
 };
 
 gulp.task(
@@ -165,14 +172,15 @@ gulp.task(
     gulp.series(
         clean,
         gulp.parallel(pugPages, style, js, images, sprite),
-        gulp.parallel(buildCss, buildFonts, buildJs, buildHtml),
+        copyFiles,
     ),
 );
 
 gulp.task(
     'start',
     gulp.series(
-        gulp.parallel(pugPages, style, js, images, sprite),
+        clean,
+        gulp.parallel(pugPages, style, images, js, sprite),
         gulp.parallel(watchDev, browsersync),
     ),
 );
